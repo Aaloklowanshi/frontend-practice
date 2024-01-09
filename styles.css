@@ -1,0 +1,33 @@
+.sidebar{
+    display: flex;
+    height: 100vh;
+    width: 5%;
+    border: 2px solid black;
+}
+
+
+
+.profile{
+    display: flex;
+    height: 100vh;
+    width: 25%;
+    border: 2px solid black;
+}
+
+
+
+.center-area{
+    display: flex;
+    height: 100vh;
+    width: 55%;
+    border: 2px solid black;
+}
+
+
+
+.retirement-strategy{
+    display: flex;
+    height: 65vh;
+    width: 15%;
+    border: 2px solid black;
+}

@@ -1,19 +1,100 @@
+.body{
+    background-color: #fafafa;
+}
+
 .sidebar{
     display: flex;
+    flex-direction: column;
     height: 100vh;
-    width: 5%;
-    border: 2px solid black;
+    width: 3%;
+    border-radius: 20px 0 0 20px;
+    /* border: 2px solid black; */
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+}
+.top{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.icon{
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 30px;
+    width: 30px;
 }
 
 
 
 .profile{
+    background-color: #fafafa;
     display: flex;
+    flex-direction: column;
     height: 100vh;
     width: 25%;
-    border: 2px solid black;
+    /* border: 2px solid black; */
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
 }
-
+.profile-img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.welcometext{
+    display: flex;
+    align-items: center;
+}
+.first-text{
+    font-size: 25px;
+    font-weight: 1000;
+    /* font-family: sans-serif; */
+}
+.small-text{
+    font-size: 15px;
+    color: #d8d8d8;
+    margin-top: -20px;
+}
+.button{
+    display: flex;
+    height:37px;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+    background-color: #4935ff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+#button-text{
+    color: white;
+}
+.down-icon{
+    margin-left: 3%;
+    color: white;
+    height: 10px;
+    width: 15px;
+}
+.withdrawl{
+    text-decoration:solid;
+    font-size: 15px;
+    font-weight: 600;
+    
+}
+.dates{
+    font-size: 15px;
+    color: #d8d8d8;
+    margin-bottom: -10px;
+}
+.transactions{
+    margin-top: 30%;
+}
 
 
 .center-area{
@@ -24,7 +105,50 @@
 }
 
 
+.center-area{
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+}
+.money-goal{
+    display: flex;
+    flex-direction: row;
+}
+.goal-first{
+    margin-right: 3%;
+}
+.goal-achieved{
+    margin-right: 3%;
+    margin-left: 3%;
+}
+.center-area-heading-text{
+    color: blue;
+    font-size: 1rem;
+}
+.line-image{
+    margin-top: -15%;
+    width: 70%;
+    /* height: 3%; */
+}
+.income-text{
+    font-size: 1.6rem;
+    font-weight: 700;
 
+}
+.starting-year{
+    font-size: 1.2rem;
+    margin-top: -1.2%;
+    font-weight: 600;
+}
+.bottom-section{
+    display: flex;
+    flex-direction: column;
+}
+.left{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
 .retirement-strategy{
     display: flex;
     height: 65vh;

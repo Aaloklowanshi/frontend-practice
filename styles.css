@@ -1,3 +1,169 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+.range{
+  height: 40px;
+  width: 165px;
+}
+.sliderValue{
+  position: relative;
+  width: 100%;
+}
+.sliderValue span{
+  position: absolute;
+  height: 45px;
+  width: 45px;
+  transform: translateX(-70%) scale(0);
+  font-weight: 500;
+  top: -40px;
+  line-height: 55px;
+  z-index: 2;
+  color: #fff;
+  transform-origin: bottom;
+  transition: transform 0.3s ease-in-out;
+}
+.sliderValue span.show{
+  transform: translateX(-70%) scale(1);
+}
+.sliderValue span:after{
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  background: #664AFF;
+  border: 3px solid #fff;
+  z-index: -1;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  border-bottom-left-radius: 50%;
+  box-shadow: 0px 0px 8px rgba(0,0,0,0.1);
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+.field{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+}
+.field .value{
+  position: absolute;
+  font-size: 18px;
+  color: #664AFF;
+  font-weight: 600;
+}
+.field .value.left{
+  left: -22px;
+}
+.field .value.right{
+  right: -43px;
+}
+.range input{
+  -webkit-appearance: none;
+  width: 100%;
+  height: 3px;
+  background: #ddd;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  z-index: 2222;
+}
+.range input::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: red;
+  border-radius: 50%;
+  background: #664AFF;
+  border: 1px solid #664AFF;
+  cursor: pointer;
+}
+.range input::-moz-range-thumb{
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: red;
+  border-radius: 50%;
+  background: #664AFF;
+  border: 1px solid #664AFF;
+  cursor: pointer;
+}
+.range input::-moz-range-progress{
+  background: #664AFF;
+}
+  
+  .container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  .container .progress {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    color: #fff;
+    background: #444 linear-gradient(to right, transparent 50%, var(--clr) 0);
+  }
+  
+  .container .progress h3 {
+    position: absolute;
+    top: 26%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5em;
+    z-index: 1;
+    font-weight: 500;
+  }
+  
+  .container .progress h3 span {
+    font-size: 0.65em;
+    font-weight: 400;
+  }
+  .container .progress h4 {
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    font-weight: 500;
+    color: var(--clr);
+    text-transform: uppercase;
+  }
+  
+  .container .progress::before {
+    content: '';
+    display: block;
+    height: 100%;
+    margin-left: 50%;
+    transform-origin: left;
+    border-radius: 0 100% 100% 0/50%;
+  }
+  
+  .container .progress::after {
+    content: '';
+    position: absolute;
+    inset: 10px;
+    border-radius: 50%;
+    background:white
+  }
+  
+  .container .progress::before {
+    background: var(--clr);
+    transform: rotate(calc(((var(--i) - 50) * 0.01turn )));
+  } 
+  
+  /* if value is less than 50%, then */
+  
+    .container .progress.less::before {
+    background: #444;
+    transform: rotate(calc(((var(--i) - 0) * 0.01turn )));
+  } 
+  
+
+
 .body{
     background-color: #fafafa;
 }
@@ -34,7 +200,6 @@
     flex-direction: column;
     height: 100vh;
     width: 25%;
-    /* border: 2px solid black; */
     align-items: center;
     justify-content: center;
     padding: 20px;
@@ -100,8 +265,7 @@
 .center-area{
     display: flex;
     height: 100vh;
-    width: 55%;
-    border: 2px solid black;
+    width: 48%;
 }
 
 
@@ -133,7 +297,10 @@
 .income-text{
     font-size: 1.6rem;
     font-weight: 700;
-
+}
+.contribution-text{
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 .starting-year{
     font-size: 1.2rem;
@@ -142,16 +309,42 @@
 }
 .bottom-section{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.peers-text{
+    font-size: 1.7rem;
+    font-weight: 700;
+
+}
+.inside-bottom-left{
+    display: flex;
+    flex-direction: row;
+    /* width: 130px; */
+    align-items: center;
 }
 .left{
     display: flex;
-    align-items: center;
-    flex-direction: row;
+        flex-direction: column;
+        width: 25%;
 }
 .retirement-strategy{
     display: flex;
+    align-items: center;
+    flex-direction: column;
     height: 65vh;
-    width: 15%;
-    border: 2px solid black;
+    width: 19%;
+    padding: 2%;
+    background-color: #fafafa;
+}
+.retirement-text{
+  font-size: 1.1rem;
+  margin-bottom: -2%;
+}
+.heading-text{
+    font-size: 1.4rem;
+}
+.employee-contribution , .intrest-rate{
+  display: flex;
+  justify-content: space-around;
 }

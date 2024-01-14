@@ -1,230 +1,326 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="styles.css" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
 
-  <body>
-    <div style="display: flex;">
-      <!-- sidebar -->
+<head>
+  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
 
-      <div class="sidebar">
-        <div class="top">
-          <div class="butterfly">
-            <img class="icon" src="/assets/butterfly.png" alt="">
-          </div>
-          <div class="search">
-            <img class="icon" src="/assets/search.png" alt="">
-          </div>
+<body>
+  <div style="display: flex;">
+    <!-- sidebar -->
+
+    <div class="sidebar">
+      <div class="top">
+        <div class="butterfly">
+          <img class="icon" src="/assets/butterfly.png" alt="">
         </div>
-
-        <div class="middle ">
-
-          <div class="home">
-            <img class="icon" src="/assets/home.png" alt="">
-          </div>
-
-          <div class="news ">
-            <img class="icon" src="/assets/newspaper-folded.png" alt="">
-          </div>
-
-          <div class="menu">
-            <img class="icon" src="/assets/list.png" alt="">
-          </div>
-
-          <div class="account">
-            <img class="icon" src="/assets/user.png" alt="">
-          </div>
-
-        </div>
-
-        <div class="bottom">
-
-          <div class="notification">
-            <img class="icon" src="/assets/bell.png" alt="">
-          </div>
-
-          <div class="logout">
-            <img class="icon" src="/assets/exit.png" alt="">
-          </div>
-
+        <div class="search">
+          <img class="icon" src="/assets/search.png" alt="">
         </div>
       </div>
 
-      <!-- sidebar -->
+      <div class="middle ">
 
-      <!-- profile -->
-
-      <div class="profile">
-        <div class="welcometext">
-          <div class="profile-image">
-            <img class="profile-img" src="/assets/user.png" alt="">
-          </div>
-
-          <div class="welcome-text">
-            <h2 style="margin-bottom: -5%;">Hi Mike ,</h2>
-            <p> Welcome back</p>
-          </div>
-
-        </div>
-        
-        <div class="balance-details">
-          <h4 style="margin-bottom: -9px;">Today</h4>
-          <div class="inner">
-            <div class="first">
-              <p class="first-text"> $19,892</p>
-              <p class="small-text">Account Balance</p>
-            </div>
-
-            <div class="second">
-              <p> <h4>$4,000</h4></p>
-              <p class="small-text">Year-to-Date Contributions</p>
-            </div>
-
-            <div class="third">
-              <p><h4>$1,892</h4></p>
-              <p class="small-text">Total Intrest</p>
-            </div>
-          </div>
-
-          <div class="button">
-            <p id="button-text"> I want to</p>
-            <img class="down-icon" src="/assets/down.png" alt="">
-          </div>
+        <div class="home">
+          <img class="icon" src="/assets/home.png" alt="">
         </div>
 
-        <div class="recent-transactions">
-
-          <div class="transactions">
-            <h3 style="margin-bottom: 40px;">Recent Transactions</h3>
-            <div class="first-transaction">
-              <p class="dates">2020-08-07</p>
-              <p class="withdrawl">withdrawl transfer to Bank-XXX190</p>
-            </div>
-
-            <div class="second-transaction">
-              <p class="dates">2020-07-21</p>
-              <p class="withdrawl">withdrawl transfer to Bank-XXX190</p>
-            </div>
-
-            <div class="third-transaction">
-              <p class="dates">2020-07-16</p>
-              <p class="withdrawl">withdrawl transfer to Bank-XXX190</p>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      <!-- profile -->
-
-      <!-- center -->
-
-      <div class="center-area">
-
-        <div class="heading">
-          <p class="center-area-heading-text">Retirement Income</p>
-          <p class="starting-year">starting year 2056</p>
+        <div class="news ">
+          <img class="icon" src="/assets/newspaper-folded.png" alt="">
         </div>
 
-        <div class="money-goal">
-          <div class="goal-first">
-            <p class="income-text">$300000</p>
-            <p class="small-text">My Goal</p>
-            <img class="line-image" src="/assets/line.png" alt="">
-          </div>
-
-          <div class="goal-achieved">
-            <p  class="income-text">59%</p>
-            <p class="small-text">Goal Achieved</p>
-            <img class="line-image" src="/assets/line.png" alt="">
-          </div>
-
-          <div class="monthly-income">
-            <p  class="income-text">$300</p>
-            <p class="small-text">Est. Monthly Income</p>
-            <img class="line-image" src="/assets/line.png" alt="">
-          </div>
+        <div class="menu">
+          <img class="icon" src="/assets/list.png" alt="">
         </div>
 
-        <div class="graph">
-          <div class="contributions-heading">
-
-          </div>
-
-          <div style="width: 900px; height: 400px; position: relative;">
-            <canvas id="myChart"></canvas>
-          </div>
-
-          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
+        <div class="account">
+          <img class="icon" src="/assets/user.png" alt="">
         </div>
-
-        <div class="peers">
-          <div class="heading">
-            <p>How do i Compare to my peers</p>
-            <p>These numbers represent current goal achievement</p>
-          </div>
-
-          <div class="bottom-section">
-            <div class="left">
-
-              <p> <p>Age:</p> <p>Under 30</p> <img class="down-icon" src="/assets/down.png" alt=""></p>
-              <p> <p>salary:</p> <p>k 20 - k 30</p> <img class="down-icon" src="/assets/down.png" alt=""></p>
-              <p> <p>gender:</p> <p>male</p> <img class="down-icon" src="/assets/down.png" alt=""></p>
-
-            </div>
-            <div class="right">
-
-            </div>
-          </div>
-        </div>
-
 
       </div>
 
-      <!-- center -->
+      <div class="bottom">
 
-      <!-- retirement-strategy -->
+        <div class="notification">
+          <img class="icon" src="/assets/bell.png" alt="">
+        </div>
 
-      <div class="retirement-strategy"></div>
+        <div class="logout">
+          <img class="icon" src="/assets/exit.png" alt="">
+        </div>
 
-      <!-- retirement-strategy -->
+      </div>
     </div>
-    <script>
-      const ctx = document.getElementById('myChart');
-    
-      new Chart(ctx, {
-        type: 'bar',
-        data: {
-          labels: ['20',  ' ', '25', ' ','30',' ', '35', ' ','60',' ', '65'],
-          datasets: [{
-            label: '# of Votes',
-            data: [90, 100, 110, 130 , 150 , 170 ,200 , 210 , 240 , 280 , 300],
-            borderWidth: 1,
-            barThickness : 35,
-            multiColorBars: true,
-          }]
-        },
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true,
-              ticks: {
-            stepSize: 100,
-            min: 0,
-            max: 300
-          }
+
+    <!-- sidebar -->
+
+    <!-- profile -->
+
+    <div class="profile">
+      <div class="welcometext">
+        <div class="profile-image">
+          <img class="profile-img" src="/assets/user.png" alt="">
+        </div>
+
+        <div class="welcome-text">
+          <h2 style="margin-bottom: -5%;">Hi Mike ,</h2>
+          <p> Welcome back</p>
+        </div>
+
+      </div>
+
+      <div class="balance-details">
+        <h4 style="margin-bottom: -9px;">Today</h4>
+        <div class="inner">
+          <div class="first">
+            <p class="first-text"> $19,892</p>
+            <p class="small-text">Account Balance</p>
+          </div>
+
+          <div class="second">
+            <p>
+            <h4>$4,000</h4>
+            </p>
+            <p class="small-text">Year-to-Date Contributions</p>
+          </div>
+
+          <div class="third">
+            <p>
+            <h4>$1,892</h4>
+            </p>
+            <p class="small-text">Total Intrest</p>
+          </div>
+        </div>
+
+        <div class="button">
+          <p id="button-text"> I want to</p>
+          <img class="down-icon" src="/assets/down.png" alt="">
+        </div>
+      </div>
+
+      <div class="recent-transactions">
+
+        <div class="transactions">
+          <h3 style="margin-bottom: 40px;">Recent Transactions</h3>
+          <div class="first-transaction">
+            <p class="dates">2020-08-07</p>
+            <p class="withdrawl">withdrawl transfer to Bank-XXX190</p>
+          </div>
+
+          <div class="second-transaction">
+            <p class="dates">2020-07-21</p>
+            <p class="withdrawl">withdrawl transfer to Bank-XXX190</p>
+          </div>
+
+          <div class="third-transaction">
+            <p class="dates">2020-07-16</p>
+            <p class="withdrawl">withdrawl transfer to Bank-XXX190</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- profile -->
+
+    <!-- center -->
+
+    <div class="center-area">
+
+      <div class="heading">
+        <p class="center-area-heading-text">Retirement Income</p>
+        <p class="starting-year">starting year 2056</p>
+      </div>
+
+      <div class="money-goal">
+        <div class="goal-first">
+          <p class="income-text">$300000</p>
+          <p class="small-text">My Goal</p>
+          <img class="line-image" src="/assets/line.png" alt="">
+        </div>
+
+        <div class="goal-achieved">
+          <p class="income-text">59%</p>
+          <p class="small-text">Goal Achieved</p>
+          <img class="line-image" src="/assets/line.png" alt="">
+        </div>
+
+        <div class="monthly-income">
+          <p class="income-text">$300</p>
+          <p class="small-text">Est. Monthly Income</p>
+          <img class="line-image" src="/assets/line.png" alt="">
+        </div>
+      </div>
+
+      <div class="graph">
+        <div class="contributions-heading">
+          <p class="contribution-text">Contributions Overtime</p>
+        </div>
+
+        <div style="width: 900px; height: 400px; position: relative;">
+          <canvas id="myChart"></canvas>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+      </div>
+
+      <div class="peers">
+        <div class="heading">
+          <p class="peers-text">How do i Compare to my peers</p>
+          <p class="small-text">These numbers represent current goal achievement</p>
+        </div>
+
+        <div class="bottom-section">
+          <div class="left">
+            <div class="age">
+              <p class="inside-bottom-left"> Age: Under 30 <img class="down-icon" src="/assets/down.png" alt=""></p>
+            </div>
+
+            <div class="salary">
+              <p class="inside-bottom-left"> Salary: k 20 - k 30 <img class="down-icon" src="/assets/down.png" alt="">
+              </p>
+            </div>
+
+            <div class="gender">
+              <p class="inside-bottom-left"> Gender: Male <img class="down-icon" src="/assets/down.png" alt=""></p>
+            </div>
+          </div>
+          <div class="right">
+            <div class="container">
+              <div class="progress" style="--i:78;--clr:#23d6aa;">
+                <h3 style="color: black;">78<span>%</span></h3>
+              </div>
+              <div class="progress" style="--i:95;--clr:#23d6aa;">
+                <h3 style="color: black;">95<span>%</span></h3>
+              </div>
+              <div class="progress less" style="--i:59;--clr:#23d6aa;">
+                <h3 style="color: black;">59<span>%</span></h3>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <!-- center -->
+
+    <!-- retirement-strategy -->
+
+    <div class="retirement-strategy">
+      <p class="heading-text">
+        Retirement Strategy
+      </p>
+      <div class="emp-contribution">
+        <p class="retirement-text">Employee Contribution</p>
+        <div class="range">
+          <div class="sliderValue">
+            <span>100</span>
+          </div>
+          <div class="field">
+            <div class="value left">0</div>
+            <input type="range" min="10" max="200" value="100" steps="1">
+            <div class="value right">200</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="retirement-age">
+        <p class="retirement-text">Retirement Age</p>
+        <div class="range">
+          <div class="sliderValue">
+            <span>100</span>
+          </div>
+          <div class="field">
+            <div class="value left">0</div>
+            <input type="range" min="10" max="200" value="100" steps="1">
+            <div class="value right">200</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="result">
+        <div class="intrest-rate">
+          <p> Employee Contribution </p>
+          <p>8.4%</p>
+        </div>
+
+        <div class="intrest-rate">
+          <p> Intrest Rate </p>
+          <p>5%</p>
+        </div>
+      </div>
+
+      <div class="button">
+        <p>Update</p>
+      </div>
+
+      <a href=""> view Help Docs > </a>
+
+    </div>
+
+    <!-- retirement-strategy -->
+  </div>
+  <script>
+    const ctx = document.getElementById('myChart');
+
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['20', ' ', '25', ' ', '30', ' ', '35', ' ', '60', ' ', '65'],
+        datasets: [{
+          label: '# of Votes',
+          data: [90, 100, 110, 130, 150, 170, 200, 210, 240, 280, 300],
+          borderWidth: 1,
+          barThickness: 35,
+          multiColorBars: true,
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              stepSize: 100,
+              min: 0,
+              max: 300
             }
           }
         }
+      }
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+      const slideValue = document.querySelector(".sliderValue span");
+      const inputSlider = document.querySelector("input");
+      const rightValue = document.querySelector(".value.right");
+
+      inputSlider.addEventListener("input", () => {
+        let value = inputSlider.value;
+        slideValue.textContent = value;
+        slideValue.style.left = (value / 2) + "%";
+        slideValue.classList.add("show");
+        rightValue.textContent = value;
       });
-    </script>
-     
-    <script  src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.js" integrity="sha512-7DgGWBKHddtgZ9Cgu8aGfJXvgcVv4SWSESomRtghob4k4orCBUTSRQ4s5SaC2Rz+OptMqNk0aHHsaUBk6fzIXw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  </body>
+
+      inputSlider.addEventListener("blur", () => {
+        slideValue.classList.remove("show");
+      });
+    });
+
+
+
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.js"
+    integrity="sha512-7DgGWBKHddtgZ9Cgu8aGfJXvgcVv4SWSESomRtghob4k4orCBUTSRQ4s5SaC2Rz+OptMqNk0aHHsaUBk6fzIXw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
 
 </html>
